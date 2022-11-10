@@ -40,7 +40,19 @@ In this regex, we are using 2 different quantifiers. These quantifiers ensure th
 
 ### OR Operator
 
+This regex does not use an OR Operator.
+
 ### Character Classes
+
+Regex: `/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/`
+
+ - In this particular expression, we are using 5 different character classes.
+    >* `/d`  -- This character class will match any SINGLE digit character from 0 to 9. This may also include any Unicode character that has a digit attribute.
+    >* `0-9`  -- Similar to `/d`, but this is strictly matching characters from 0-9.
+    >* `a-z` -- This class will match any letter from a to z, as long as that letter is lowercase.
+    >* `/.`  -- This is how we match a period. Since it has a special use in regex, so we use the slash preceeding it to escape its typical useage.
+    >* `@` -- This simply matches the @ symbol, where it should be used in an email address.
+
 
 ### Flags
 
