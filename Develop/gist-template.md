@@ -2,9 +2,13 @@
 
 Introductory paragraph (replace this with your text)
 
+In this tutorial, I will be explaining how to match emails via regex, using the expression 
+
 ## Summary
 
 Briefly summarize the regex you will be describing and what you will explain. Include a code snippet of the regex. Replace this text with your summary.
+
+`/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/`
 
 ## Table of Contents
 
@@ -24,7 +28,17 @@ Briefly summarize the regex you will be describing and what you will explain. In
 
 ### Anchors
 
+The anchors for any regex are simply the characters that indicate where the expression begins and where it ends. In the case of our email-matching regex, we will use `^` to begin our expression, and will use `$` to end the expression. Some expressions will allow the use of `(m)` for a multi-line regex, but that is not the case here. 
+
 ### Quantifiers
+In this regex, we are using 2 different quantifiers. These quantifiers ensure that the preceeding block of characters matches our pattern a set number of times.
+
+`/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/`
+
+In our regex above, we are using 2 different quantifiers
+
+-`+` is used to ensure that the first and second portion of the email address are at least 1 character long, but aren't limited to a maximum amount of characters
+-`{2,6}` is the other quantifier that we are using, and that is ensuring that the final portion of the email address is between 2 and 6 characters, and that each character matches what we allow in our pattern.
 
 ### OR Operator
 
