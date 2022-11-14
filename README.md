@@ -84,4 +84,4 @@ Greedy and lazy match quantifiers are used in regular expressions to indicate ho
 
 # Author
 
-The author of this REGEX is Austin McIntyre. You can find more of my projects on my GitHub here: www.github.com/aumcintyre
+The author of this REGEX is Austin McIntyre. You can find more of my projects on my GitHub here: https://www.github.com/aumcintyre
