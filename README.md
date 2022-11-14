@@ -1,4 +1,4 @@
-# Title (replace with your title)
+# Email Verification With a Regular Expression (REGEX)
 
 In this tutorial, I will be explaining how to match text strings to a regular expression, ensuring that the string is correctly formatted as an acceptable email address. 
 
@@ -18,9 +18,6 @@ In this tutorial, I will be explaining how to match text strings to a regular ex
 - [Grouping and Capturing](#grouping-and-capturing)
 - [Bracket Expressions](#bracket-expressions)
 - [Greedy and Lazy Match](#greedy-and-lazy-match)
-- [Boundaries](#boundaries)
-- [Back-references](#back-references)
-- [Look-ahead and Look-behind](#look-ahead-and-look-behind)
 
 ## Regex Components
 
@@ -56,17 +53,26 @@ Regex: `/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/`
 
 ### Flags
 
+This regex currently uses no flags. With regular expressions, there are a total of six (6) optional flags. The `g` flag is one that is often used with an email regex, and it requires that the regular expression is tested against all possible matches in the string. Without the `g` flag, like in our example, it will test it only for the first class that the string matches.
+
 ### Grouping and Capturing
+
+- This expression looks for three (3) capturing groups. 
+    >* `([a-z0-9_\.-]+)` : This is matching the user's email name. It is looking for a string containing lowercase a-z, digits 0-9, an underscore, a period, or a hyphen. If the string contains anything else, this verification will fail.
+    >* `([\da-z\.-]+)` : This group is looking for a string containing the email domain or service. It is expecting to receive only digits 0-9, lowercase letters a-z, a period, or a hypen. Again, if the regex receives anything other than these characters, the verification will fail. 
+    >* `([a-z\.]{2,6})` : The third group is looking for the final portion of the email address after the period. This is typically com, net, org etc. The regex is expecting to receive only lowercase letters or a period, and the string should be between 2 and 6 characters long. 
+
 
 ### Bracket Expressions
 
+The bracket expressions in a REGEX are there to contain all the character classing within a certain grouping. Again, we use three (3) in this REGEX
+
+- Bracket Expressions
+    >* `[a-z0-9_\.-]`
+    >* `[\da-z\.-]`
+    >* `[a-z\.]`
+
 ### Greedy and Lazy Match
-
-### Boundaries
-
-### Back-references
-
-### Look-ahead and Look-behind
 
 ## Author
 
